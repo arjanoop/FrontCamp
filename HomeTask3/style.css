@@ -17,7 +17,6 @@ body {
 	padding : 50px;
 	background-color : rgb(39,56,82);
 	color : white;
-/*    margin-bottom: 75px;*/
 }
 
 .header:after{
@@ -42,6 +41,24 @@ body {
 	float: right;
 	font-family:arial;
 	font-size: 16px;
+}
+
+.mainHeading{
+	float: left;	
+}
+
+.subscribe{
+	margin-left: auto;
+	text-align: right;
+	font-family:arial;
+	font-size: 16px;
+}
+.subscribeButton{
+	margin-right: 4%;
+}
+
+.mainClear::after{
+	clear: both;
 }
 
 .A{
