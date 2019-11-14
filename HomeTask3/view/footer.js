@@ -1,7 +1,14 @@
-var foot = document.querySelector(".footer");
+import { generateElement } from '../model/generateElement.js'
 
-var f = document.createElement("div");
-f.className = "footer"
-f.innerHTML = "&copy;&nbsp;NewsFeed 2019";
-f.style.textAlign = "center";
-foot.appendChild(f);
+export class Footer{
+    constructor(){
+        this.foot = document.querySelector(".footer");
+    }
+
+    footerRendering(){
+        let footer = generateElement('div','footer');
+        footer.innerHTML = "&copy;&nbsp;NewsFeed 2019";
+        footer.style.textAlign = "center";
+        this.foot.appendChild(footer);
+    }
+}

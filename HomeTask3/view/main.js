@@ -1,15 +1,27 @@
-var main = document.querySelector(".content");
+import { generateElement } from '../model/generateElement.js'
+import { RightSidePannel } from './mainRight.js';
+import { MainArticle } from './mainLeft.js';
 
-//Main's Elements
-var c1 = document.createElement("div");
-c1.className = "c1";
+export class Main{
+    constructor(){
+        this.main = document.querySelector(".content");
+    }
 
-var c2 = document.createElement("div");
-c2.className = "c2";
+    mainRendering(){
+        let contentArticle = generateElement('div','c1');
+        let rightSidePannel = generateElement('div','c2');
+        let contentClear = generateElement('div','c');
+        this.main.appendChild(contentArticle);
+        this.main.appendChild(rightSidePannel);
+        this.main.appendChild(contentClear);
 
-var c = document.createElement("div");
-c.className = "c";
+        let content  = new MainArticle();
+        content.contentRendering();
 
-main.appendChild(c1);
-main.appendChild(c2);
-main.appendChild(c);
+
+
+        //Right Side Pannel Rendering after the Rending of Main Article
+        let pannel  = new RightSidePannel();
+        pannel.pannelRendering();
+    }
+}

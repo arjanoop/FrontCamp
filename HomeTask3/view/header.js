@@ -1,34 +1,36 @@
-var head = document.querySelector(".header");
+import { generateElement } from '../model/generateElement.js'
+import { EmailValidator } from '../controller/emailValidatorFunction.js'
 
-//Header's Element
-let mainHeading = document.createElement('div');
-mainHeading.className="mainHeading";
-var l1 = document.createElement('span');
-l1.className = "l1";
-l1.innerHTML = "NEWSFEED &nbsp;&nbsp;";
-var l2 = document.createElement('span');
-l2.className = "l2";
-l2.innerHTML = "Yet another newsfeed";
-mainHeading.appendChild(l1);
-mainHeading.appendChild(l2);
-head.appendChild(mainHeading);
-
-let sub = document.createElement("div");
-sub.className = "subscribe";
-var inp = document.createElement("input");
-inp.name = "email";
-inp.className = "email";
-inp.setAttribute('type', 'text');
-inp.placeholder = "Email Address";
-let subscribeButton = document.createElement("input");
-subscribeButton.type = "submit";
-subscribeButton.value = "Subscribe";
-subscribeButton.id = "b1";
-subscribeButton.className = "subscribeButton";
-sub.appendChild(inp);
-sub.appendChild(subscribeButton);
-head.appendChild(sub);
-
-let mainClear = document.createElement('div');
-mainClear.className="mainClear";
-head.appendChild(mainClear);
+export class Header{
+    constructor(){
+        this.head = document.querySelector(".header");
+    }
+    
+    headerRendering(){
+        let mainHeading = generateElement('div','mainHeading');
+        let l1 = generateElement('span','l1');
+        l1.innerHTML = "NEWSFEED &nbsp;&nbsp;";
+        let l2 = generateElement('span','l2');
+        l2.innerHTML = "Yet another newsfeed";
+        mainHeading.appendChild(l1);
+        mainHeading.appendChild(l2);
+        let sub = generateElement('div','subscribe');
+        let inp = generateElement('input','email');
+        inp.setAttribute('type', 'text');
+        inp.placeholder = "Email Address";
+        //Replace this one
+        let subscribeButton = document.createElement("input");
+        subscribeButton.type = "submit";
+        subscribeButton.value = "Subscribe";
+        subscribeButton.id = "b1";
+        subscribeButton.className = "subscribeButton";
+        sub.appendChild(inp);
+        sub.appendChild(subscribeButton);
+        let mainClear = generateElement('div','mainClear');
+        this.head.appendChild(mainHeading);
+        this.head.appendChild(sub);
+        this.head.appendChild(mainClear);
+        let emailValidation = new EmailValidator();
+        emailValidation.emailValidator();
+    } 
+} 

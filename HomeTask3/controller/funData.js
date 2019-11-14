@@ -31,4 +31,3 @@ export async function dataLoading(){
     console.log(apiData);
     return [apiData, categorySet];
 }
-
