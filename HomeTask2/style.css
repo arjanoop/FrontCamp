@@ -1,0 +1,155 @@
+*{
+	font-family:arial;
+    
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-x:hidden;
+}
+
+.header{
+	padding : 50px;
+	background-color : rgb(39,56,82);
+	color : white;
+}
+
+.header:after{
+	clear:both;
+}
+
+.l1{
+	font-size:32px;
+}
+
+.l2{
+	font-size:14px;
+}
+
+.c1{
+	width:75%;
+	float: left;	
+}
+
+.c2{
+	width:20%;
+	float: right;
+	font-family:arial;
+	font-size: 16px;
+}
+
+.A{
+    margin-left: 10px;
+	padding:10px;
+	float:left;
+	height:180px;
+	width:15%;
+}
+
+.B{
+	padding:10px;
+	float:right;
+	width: 78%;
+    margin-right: 25px;
+	
+}
+
+.AB{
+    clear: both;
+}
+
+.content{
+    margin-bottom: 50px;
+}
+
+.content:after{
+    clear:both;
+}
+
+.footer{
+	padding : 10px;
+	background-color : rgb(39,56,82);
+	color : white;   
+}
+
+.subscribe{
+	width: 70%;
+	height: 20px
+}
+
+input{
+	border-color:black;
+	margin:0px;
+	padding :10px;
+}
+
+input[type=submit] {
+	background-color: black !important;
+	height: 39px !important;
+	color : white;
+}
+
+.selectCategory{
+	border: 2px solid black;
+	padding : 10px;
+	width: 73%;
+}
+
+.titles{
+	font-size:32px;
+}
+
+.cr{
+	background-color: rgb(212,93,71) !important;
+	color: white !important;
+    height: 39px !important;
+	border: none;
+	margin-top:5px;
+}
+
+hr{
+	border: 1px solid rgb(0,0,0,0.1);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: 100%; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4);  /*Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  height: 300px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
