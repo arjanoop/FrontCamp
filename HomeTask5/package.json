@@ -1,0 +1,34 @@
+{
+  "name": "hometask5",
+  "version": "1.0.0",
+  "description": "Task on Babel and Webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --config webpack.common.js",
+    "dev": "webpack-dev-server --open --optimize-minimize",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "author": "Aj",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "css-loader": "^3.2.0",
+    "es6-promise": "^4.2.8",
+    "html-webpack-plugin": "^3.2.0",
+    "promise-polyfill": "8.1.3",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-clear-console": "^1.0.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "dependencies": {}
+}
